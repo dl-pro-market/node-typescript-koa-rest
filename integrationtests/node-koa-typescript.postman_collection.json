@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f17eeed6-0468-4ff2-9636-8a105f98b7c6",
+		"_postman_id": "034a155d-a3c2-48c2-a965-09cfa4e48d42",
 		"name": "node-koa-typescript",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -11,7 +11,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "317968ef-610a-4f58-86f1-aebda47cb4f3",
 						"exec": [
 							"pm.test(\"Create user id variable\", function () {",
 							"    var jsonData = pm.response.json();",
@@ -53,12 +52,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/users",
+					"raw": "{{url}}/user",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"users"
+						"user"
 					]
 				}
 			},
@@ -70,7 +69,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "317968ef-610a-4f58-86f1-aebda47cb4f3",
 						"exec": [
 							"pm.test(\"Status code is 400\", function () {",
 							"    pm.response.to.have.status(400);",
@@ -112,12 +110,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/users",
+					"raw": "{{url}}/user",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"users"
+						"user"
 					]
 				}
 			},
@@ -129,7 +127,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "317968ef-610a-4f58-86f1-aebda47cb4f3",
 						"exec": [
 							"pm.test(\"Status code is 400\", function () {",
 							"    pm.response.to.have.status(400);",
@@ -163,7 +160,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"email\": \"user@citest.com\"\r\n}",
+					"raw": "{\r\n    \"name\": \"Test\",\r\n\t\"email\": \"user@citest.com\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -171,12 +168,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/users",
+					"raw": "{{url}}/user",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"users"
+						"user"
 					]
 				}
 			},
@@ -188,7 +185,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "317968ef-610a-4f58-86f1-aebda47cb4f3",
 						"exec": [
 							"pm.test(\"Status code is 201\", function () {",
 							"    pm.response.to.have.status(201);",
@@ -226,12 +222,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/users/{{userId}}",
+					"raw": "{{url}}/user/{{userId}}",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"users",
+						"user",
 						"{{userId}}"
 					]
 				}
@@ -244,7 +240,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "317968ef-610a-4f58-86f1-aebda47cb4f3",
 						"exec": [
 							"pm.test(\"Status code is 400\", function () {",
 							"    pm.response.to.have.status(400);",
@@ -286,12 +281,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/users/{{userId}}",
+					"raw": "{{url}}/user/{{userId}}",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"users",
+						"user",
 						"{{userId}}"
 					]
 				}
@@ -304,7 +299,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "317968ef-610a-4f58-86f1-aebda47cb4f3",
 						"exec": [
 							"pm.test(\"Status code is 400\", function () {",
 							"    pm.response.to.have.status(400);",
@@ -345,13 +339,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/users/fakeId",
+					"raw": "{{url}}/user/97979797",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"users",
-						"fakeId"
+						"user",
+						"97979797"
 					]
 				}
 			},
@@ -363,7 +357,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "a3d18402-eb02-4ec5-a3b6-486af7a84f88",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -388,12 +381,12 @@
 					}
 				],
 				"url": {
-					"raw": "{{url}}/users/{{userId}}",
+					"raw": "{{url}}/user/{{userId}}",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"users",
+						"user",
 						"{{userId}}"
 					]
 				}
@@ -406,7 +399,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "a3d18402-eb02-4ec5-a3b6-486af7a84f88",
 						"exec": [
 							"pm.test(\"Status code is 400\", function () {",
 							"    pm.response.to.have.status(400);",
@@ -430,13 +422,13 @@
 					}
 				],
 				"url": {
-					"raw": "{{url}}/users/fakeId",
+					"raw": "{{url}}/user/98907987",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"users",
-						"fakeId"
+						"user",
+						"98907987"
 					]
 				}
 			},
@@ -448,7 +440,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "f43684e7-b04e-4b96-aa0d-2b8048dbe839",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -468,12 +459,12 @@
 					}
 				],
 				"url": {
-					"raw": "{{url}}/users",
+					"raw": "{{url}}/user",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"users"
+						"user"
 					]
 				}
 			},
@@ -485,7 +476,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "13411841-ded9-4732-a497-8304b56ef036",
 						"exec": [
 							"pm.test(\"Status code is 403\", function () {",
 							"    pm.response.to.have.status(403);",
@@ -509,12 +499,12 @@
 					}
 				],
 				"url": {
-					"raw": "{{url}}/users/{{userId}}",
+					"raw": "{{url}}/user/{{userId}}",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"users",
+						"user",
 						"{{userId}}"
 					]
 				}
@@ -527,7 +517,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "326f52fa-5ee4-4d89-b353-23163fe20fde",
 						"exec": [
 							"pm.test(\"Status code is 204\", function () {",
 							"    pm.response.to.have.status(204);",
@@ -547,18 +536,17 @@
 					}
 				],
 				"url": {
-					"raw": "{{url}}/users/{{userId}}",
+					"raw": "{{url}}/user/{{userId}}",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"users",
+						"user",
 						"{{userId}}"
 					]
 				}
 			},
 			"response": []
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
